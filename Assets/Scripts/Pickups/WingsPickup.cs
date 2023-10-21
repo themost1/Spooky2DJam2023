@@ -19,7 +19,7 @@ public class WingsPickup : FlamePickup
             return;
         }
         playerMovement.AddFlightTime(flightDuration);
-        player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar();
+        player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar(flightDuration);
         base.OnTriggerEnter2D(collision);
     }
 }

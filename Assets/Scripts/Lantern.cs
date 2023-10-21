@@ -16,6 +16,9 @@ public class Lantern : MonoBehaviour
     private float flickerAmt = 0.3f;
     private UnityEngine.Rendering.Universal.Light2D _light;
 
+    private float boostTime = 0f;
+    private float boastAmt = 0f;
+
     void Start()
     {
         lightStrength = startLightStrength;
@@ -30,16 +33,36 @@ public class Lantern : MonoBehaviour
             flickerTime = 1f;
             flickerAmt *= -1;
         }
+        boostTime -= Time.deltaTime;
         flickerTime -= Time.deltaTime;
         lightStrength -= Time.deltaTime * lightDecayPerSec;
         GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity += flickerAmt * Time.deltaTime;
         _light.intensity = Mathf.Max(minIntensity, lightStrength + defaultIntensity);
-        _light.shapeLightFalloffSize = minFalloff + (maxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
+        float calcMaxFalloff = maxFalloff;
+        if (boostTime > 0)
+        {
+            calcMaxFalloff += boastAmt;
+        }
+        _light.shapeLightFalloffSize = minFalloff + (calcMaxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
         flickerAmt = Mathf.Min(_light.intensity * 0.3f, 0.4f) * (flickerAmt < 0 ? -1 : 1);
     }
 
     public void AddIntensity(float intensity)
     {
+        if (lightStrength < 0)
+        {
+            lightStrength = 0;
+        }
         lightStrength += intensity;
+    }
+
+    public void Boost(float duration, float amt)
+    {
+        if (boostTime < 0)
+        {
+            boostTime = 0f;
+        }
+        boostTime += duration;
+        boastAmt = amt;
     }
 }

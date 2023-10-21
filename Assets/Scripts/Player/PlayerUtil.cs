@@ -63,7 +63,7 @@ public class PlayerUtil : MonoBehaviour
         return false;
     }
 
-    public void AddPickupBar()
+    public void AddPickupBar(float time)
     {
         GameObject pb = Instantiate(pickupBar);
         pb.transform.position = new Vector3(
@@ -71,8 +71,8 @@ public class PlayerUtil : MonoBehaviour
             transform.position.y + 0.3f,
             transform.position.z
         );
-        pb.GetComponent<PickupBar>().maxTime = 3;
-        pb.GetComponent<PickupBar>().timeLeft = 3;
+        pb.GetComponent<PickupBar>().maxTime = time;
+        pb.GetComponent<PickupBar>().timeLeft = time;
         pb.transform.parent = transform;
     }
 }

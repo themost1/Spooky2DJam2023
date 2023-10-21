@@ -19,7 +19,7 @@ public class ShroomsPickup : FlamePickup
             return;
         }
         playerMovement.AddSpeedBoostTime(speedBoostDuration);
-        player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar();
+        player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar(speedBoostDuration);
         base.OnTriggerEnter2D(collision);
     }
 }
