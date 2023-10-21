@@ -6,6 +6,7 @@ using TMPro;
 public class PlayerUtil : MonoBehaviour
 {
     private int _keys = 0;
+    public GameObject pickupBar;
 
     public GameObject GetLanternObject()
     {
