@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WingsPickup : FlamePickup
 {
-    private float _flightTimeSecs = 3.0f;
+    public float flightDuration = 3.0f;
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,7 +18,7 @@ public class WingsPickup : FlamePickup
         {
             return;
         }
-        playerMovement.AddFlightTime(_flightTimeSecs);
+        playerMovement.AddFlightTime(flightDuration);
         player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar();
         base.OnTriggerEnter2D(collision);
     }

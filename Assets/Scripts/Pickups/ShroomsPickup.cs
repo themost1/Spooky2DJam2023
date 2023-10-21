@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShroomsPickup : FlamePickup
 {
-    private float _speedBoostTimeSecs = 3.0f;
+    public float speedBoostDuration = 3.0f;
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,7 +18,7 @@ public class ShroomsPickup : FlamePickup
         {
             return;
         }
-        playerMovement.AddSpeedBoostTime(_speedBoostTimeSecs);
+        playerMovement.AddSpeedBoostTime(speedBoostDuration);
         player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar();
         base.OnTriggerEnter2D(collision);
     }
