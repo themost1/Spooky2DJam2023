@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GhostMovement : MonoBehaviour
 {
     public float speed;
+    public string loseScene;
     private float _time;
     private float _startX;
 
@@ -26,6 +28,6 @@ public class GhostMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        SceneManager.LoadScene(loseScene);
     }
 }
