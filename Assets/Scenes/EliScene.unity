@@ -387,6 +387,18 @@ PrefabInstance:
       value: 1346358411
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_Color.b
+      value: 0.83647794
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9225486
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: m_FalloffIntensity
       value: 0.3
       objectReference: {fileID: 0}
@@ -396,19 +408,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0
+      value: -0.000300169
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: -0.006200075
+      value: -0.0019500256
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 4.5049
+      value: 4.4981003
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 4.5009003
+      value: 4.4949503
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
