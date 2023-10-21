@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerUtil : MonoBehaviour
 {
@@ -21,5 +22,13 @@ public class PlayerUtil : MonoBehaviour
     public void AddKey()
     {
         _keys++;
+        GameObject keyCount = GameObject.Find("KeyTextCanvas");
+        foreach (Transform child in keyCount.transform)
+        {
+            if (child.name == "KeyText")
+            {
+                child.GetComponent<TMP_Text>().text = _keys.ToString() + "/3";
+            }
+        }
     }
 }
