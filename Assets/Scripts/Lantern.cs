@@ -25,4 +25,9 @@ public class Lantern : MonoBehaviour
         GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity += flickerAmt * Time.deltaTime;
         _light.intensity = Mathf.Max(0, _light.intensity - lightDecayPerSec * Time.deltaTime);
     }
+
+    public void AddIntensity(float intensity)
+    {
+        _light.intensity += intensity;
+    }
 }
