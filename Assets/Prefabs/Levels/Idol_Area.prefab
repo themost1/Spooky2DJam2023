@@ -979,6 +979,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 4095207692380477049, guid: d925640b896e2c845b94cf3159d56f51, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095207692380477049, guid: d925640b896e2c845b94cf3159d56f51, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095207692380477049, guid: d925640b896e2c845b94cf3159d56f51, type: 3}
+      propertyPath: m_Color.r
+      value: 0.58178806
+      objectReference: {fileID: 0}
     - target: {fileID: 6012191311774375101, guid: d925640b896e2c845b94cf3159d56f51, type: 3}
       propertyPath: m_RootOrder
       value: 7
