@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Lantern : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float flickerTime = 0f;
+    private float flickerAmt = 0.3f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (flickerTime <= 0)
+        {
+            flickerTime = 1f;
+            flickerAmt *= -1;
+        }
+        flickerTime -= Time.deltaTime;
+        GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity += flickerAmt * Time.deltaTime;
     }
 }
