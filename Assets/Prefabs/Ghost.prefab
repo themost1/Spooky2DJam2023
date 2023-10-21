@@ -120,7 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac18d37224ce0e84d8546675433ce244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
+  loseScene: LoseScreen
 --- !u!60 &3184029819521861180
 PolygonCollider2D:
   m_ObjectHideFlags: 0
