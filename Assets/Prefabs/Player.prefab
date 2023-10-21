@@ -449,26 +449,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: -0.002300024
+      value: -0.00454998
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: -0.0010499954
+      value: -0.0030498505
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 4.5018997
+      value: 4.50115
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 4.49885
+      value: 4.49895
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[3]
+      value: -174582271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[4]
       value: -253618237
       objectReference: {fileID: 0}
     m_RemovedComponents: []

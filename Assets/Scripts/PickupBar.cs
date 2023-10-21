@@ -21,10 +21,17 @@ public class PickupBar : MonoBehaviour
 
     void Update()
     {
+        foreach (Transform child in transform)
+        {
+            if (child.name == "Active")
+            {
+                _active = child.gameObject;
+            }
+        }
         timeLeft -= Time.deltaTime;
         _active.transform.localScale = new Vector3(
-            _active.transform.localScale.x,
             timeLeft / maxTime,
+            _active.transform.localScale.y,
             1
         );
         if (timeLeft < 0)
