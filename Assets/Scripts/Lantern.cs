@@ -4,31 +4,42 @@ using UnityEngine;
 
 public class Lantern : MonoBehaviour
 {
+    public float minFalloff = 2f;
+    public float maxFalloff = 4f;
+    public float lightDecayPerSec = 0.05f;
+    public float startLightStrength = 1f;
+    public float minIntensity = 0.2f;
+    public float defaultIntensity = 1f;
+
+    private float lightStrength;
     private float flickerTime = 0f;
     private float flickerAmt = 0.3f;
-    private float lightDecayPerSec = 0.05f;
     private UnityEngine.Rendering.Universal.Light2D _light;
 
     void Start()
     {
+        lightStrength = startLightStrength;
         _light = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
     }
 
     void Update()
     {
+        // you start losing light once lightStrength becomes negative
         if (flickerTime <= 0)
         {
             flickerTime = 1f;
             flickerAmt *= -1;
         }
         flickerTime -= Time.deltaTime;
+        lightStrength -= Time.deltaTime * lightDecayPerSec;
         GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity += flickerAmt * Time.deltaTime;
-        _light.intensity = Mathf.Max(0.2f, _light.intensity - lightDecayPerSec * Time.deltaTime);
+        _light.intensity = Mathf.Max(minIntensity, lightStrength + defaultIntensity);
+        _light.shapeLightFalloffSize = minFalloff + (maxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
         flickerAmt = Mathf.Min(_light.intensity * 0.3f, 0.4f) * (flickerAmt < 0 ? -1 : 1);
     }
 
     public void AddIntensity(float intensity)
     {
-        _light.intensity += intensity;
+        lightStrength += intensity;
     }
 }
