@@ -22,18 +22,13 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float translateAmount = Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * translateAmount * speed * Time.deltaTime);
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump") && IsGrounded)
         {
-            if (IsGrounded)
-            {
-                Vector2 vel = _rb.velocity;
-                vel.y = jumpStrength;
-                _rb.velocity = vel;
-            }
+            _rb.AddForce(new Vector2(0, jumpStrength), ForceMode2D.Impulse);
         }
     }
 
