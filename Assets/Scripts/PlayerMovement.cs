@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement instance;
 
+    private Animator _animator;
+
     public float speed, jumpStrength;
     private List<GameObject> _feetTouching = new();
     private Rigidbody2D _rb;
@@ -28,17 +30,19 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate()
     {
         float translateAmount = Input.GetAxis("Horizontal");
-        transform.Translate(Vector2.right * translateAmount * speed * (_speedBoostTimeSecs > 0 ? 1.4f : 1) * Time.deltaTime);
+        transform.Translate(Vector2.right * translateAmount * speed * (_speedBoostTimeSecs > 0 ? 1.4f : 1));
         if (Input.GetButton("Jump") && IsGrounded && jumpDelay <= 0)
         {
             _rb.velocity = new Vector3(0, jumpStrength, 0);
             jumpDelay = maxJumpDelay;
         }
+        _animator.SetInteger("walking_dir", Mathf.RoundToInt(translateAmount));
     }
 
     void Update()
