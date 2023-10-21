@@ -6,7 +6,19 @@ using TMPro;
 public class PlayerUtil : MonoBehaviour
 {
     private int _keys = 0;
+    public int Keys
+    {
+        get => _keys;
+    }
+
+    public static PlayerUtil instance;
+
     public GameObject pickupBar;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public GameObject GetLanternObject()
     {
@@ -30,6 +42,10 @@ public class PlayerUtil : MonoBehaviour
             {
                 child.GetComponent<TMP_Text>().text = _keys.ToString() + "/3";
             }
+        }
+        foreach (Gate gate in GameObject.FindObjectsOfType<Gate>())
+        {
+            gate.UpdateKeyCount(_keys);
         }
     }
 
