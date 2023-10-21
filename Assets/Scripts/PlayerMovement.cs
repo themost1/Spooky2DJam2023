@@ -4,15 +4,52 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float speed, jumpStrength;
+
+    private List<GameObject> _feetTouching = new();
+
+    private Rigidbody2D _rb;
+    public bool IsGrounded
+    {
+        get
+        {
+            return _feetTouching.Count != 0;
+        }
+    }
+
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
-        if (Input.GetKey("d"))
+        float translateAmount = Input.GetAxis("Horizontal");
+        transform.Translate(Vector2.right * translateAmount * speed * Time.deltaTime);
+        if (Input.GetButton("Jump"))
         {
-            transform.position += new Vector3(0.01f, 0, 0);
+            if (IsGrounded)
+            {
+                Vector2 vel = _rb.velocity;
+                vel.y = jumpStrength;
+                _rb.velocity = vel;
+            }
         }
-        else if (Input.GetKey("a"))
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!_feetTouching.Contains(collision.gameObject))
         {
-            transform.position += new Vector3(-0.01f, 0, 0);
-        }       
+            _feetTouching.Add(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (_feetTouching.Contains(collision.gameObject))
+        {
+            _feetTouching.Remove(collision.gameObject);
+        }
     }
 }
