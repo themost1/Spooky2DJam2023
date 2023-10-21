@@ -43,6 +43,10 @@ public class PlayerUtil : MonoBehaviour
                 child.GetComponent<TMP_Text>().text = _keys.ToString() + "/3";
             }
         }
+        foreach (KeyImage key in GameObject.FindObjectsOfType<KeyImage>())
+        {
+            key.UpdateKeyCount(_keys);
+        }
         foreach (Gate gate in GameObject.FindObjectsOfType<Gate>())
         {
             gate.UpdateKeyCount(_keys);
