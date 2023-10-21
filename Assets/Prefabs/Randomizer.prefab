@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-  - toSpawn: {fileID: 3893317143703818182, guid: 31b470649774ef54cb045eba24d2a808, type: 3}
+  - toSpawn: {fileID: 6145913727258521008, guid: 22bb9eca087b74e4bac180ef9de28ab7, type: 3}
     weight: 1
   - toSpawn: {fileID: 7995697700139774291, guid: 7c1adc7b41ea13b4db96795177730fe1, type: 3}
     weight: 1
@@ -56,8 +56,4 @@ MonoBehaviour:
   - toSpawn: {fileID: 8527448352987648239, guid: d6a4b64572712b54f9292868c947588c, type: 3}
     weight: 1
   - toSpawn: {fileID: 8397733962999384210, guid: 2d238da2954108c4aadc428d7b0da79b, type: 3}
-    weight: 1
-  - toSpawn: {fileID: 6145913727258521008, guid: 22bb9eca087b74e4bac180ef9de28ab7, type: 3}
-    weight: 1
-  - toSpawn: {fileID: 4719183117732240256, guid: bd2615516de5cf9408b10c110f40d85b, type: 3}
     weight: 1
