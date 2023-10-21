@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpStrength: 5
+  jumpStrength: 50
 --- !u!50 &2751876174666462804
 Rigidbody2D:
   serializedVersion: 4
@@ -448,19 +448,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: -0.0012500286
+      value: -0.002300024
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: -0.00080013275
+      value: -0.0010499954
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 4.50585
+      value: 4.5018997
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 4.4983
+      value: 4.49885
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size

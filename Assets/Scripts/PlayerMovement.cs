@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Vector2.right * translateAmount * speed * Time.deltaTime);
         if (Input.GetButton("Jump") && IsGrounded && jumpDelay <= 0)
         {
-            _rb.AddForce(new Vector2(0, jumpStrength), ForceMode2D.Impulse);
+            _rb.velocity = new Vector3(0, jumpStrength, 0);
             jumpDelay = maxJumpDelay;
         }
     }
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!_feetTouching.Contains(collision.gameObject))
+        if (!_feetTouching.Contains(collision.gameObject) && collision.gameObject.tag != "Pickup")
         {
             _feetTouching.Add(collision.gameObject);
         }
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (_feetTouching.Contains(collision.gameObject))
+        if (_feetTouching.Contains(collision.gameObject) && collision.gameObject.tag != "Pickup")
         {
             _feetTouching.Remove(collision.gameObject);
         }
