@@ -5,31 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class GhostMovement : MonoBehaviour
 {
-    public float speed;
+    public float baseSpeed;
+    public float increaseRate;
     public string loseScene;
-    private float _time;
-    private float _startX;
 
     private float _blockedX = Mathf.Infinity;
-
-    private void Start()
-    {
-        _time = 0;
-        _startX = transform.position.x;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        _time += Time.deltaTime;
         Vector2 newPos = transform.position;
-        newPos.x = _startX + _time * speed;
+        newPos.x = newPos.x + Time.deltaTime * GetSpeed();
         if (newPos.x > _blockedX)
         {
             newPos.x = _blockedX;
         }
         newPos.y = PlayerMovement.instance.transform.position.y;
         transform.position = newPos;
+    }
+
+    private float GetSpeed()
+    {
+        float playerX = PlayerMovement.instance.transform.position.x;
+        float currX = transform.position.x;
+        return (playerX - currX) * increaseRate + baseSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
