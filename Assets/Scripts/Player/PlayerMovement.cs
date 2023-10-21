@@ -35,14 +35,38 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        float translateAmount = Input.GetAxis("Horizontal");
+        float translateAmount;
+        bool isJumping = false;
+        if (Input.touchCount > 0)
+        {
+            Touch first_finger = Input.GetTouch(0);
+            if (first_finger.position.x > Camera.main.pixelWidth / 2)
+            {
+                translateAmount = 1;
+            }
+            else
+            {
+                translateAmount = -1;
+            }
+            if (Input.touchCount > 1)
+            {
+                isJumping = true;
+            }
+        }
+        else
+        {
+            translateAmount = Input.GetAxis("Horizontal");
+            isJumping = Input.GetButton("Jump");
+        }
+        
         transform.Translate(
             Vector2.right
                 * translateAmount
                 * speed
                 * (_speedBoostTimeSecs > 0 ? 1.6f : 1)
         );
-        if (Input.GetButton("Jump") && (IsGrounded || _flightTimeSecs > 0) && jumpDelay <= 0)
+        isJumping = isJumping && (IsGrounded || _flightTimeSecs > 0) && jumpDelay <= 0;
+        if (isJumping)
         {
             _rb.velocity = new Vector3(0, jumpStrength, 0);
             jumpDelay = maxJumpDelay;
