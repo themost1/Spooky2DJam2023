@@ -19,7 +19,6 @@ public class ShroomsPickup : MonoBehaviour
             return;
         }
         playerMovement.AddSpeedBoostTime(_speedBoostTimeSecs);
-        Debug.Log("adding sb");
         player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar();
         Destroy(this.gameObject);
     }

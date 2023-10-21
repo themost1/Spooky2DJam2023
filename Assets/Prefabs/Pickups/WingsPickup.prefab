@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7015841837628432705}
   - component: {fileID: 7015841837628432704}
   - component: {fileID: 7015841837628432707}
-  - component: {fileID: -2890563078972783771}
+  - component: {fileID: 1165731401298819364}
   m_Layer: 0
   m_Name: WingsPickup
   m_TagString: Pickup
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 1346358411
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: efc26c70b51087d41b4da087d3eeb762, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d92df67ddf6c6534a9dad2e4b87603c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
---- !u!114 &-2890563078972783771
+--- !u!114 &1165731401298819364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7015841837628432702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fead9d4592751ff49a36141593e306c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b9234abb6c576b5498623455c41a2955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8455609645913627634
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.7264151, g: 0.09365724, b: 0.69956, a: 1}
+  m_Color: {r: 0.094117664, g: 0.7254902, b: 0.60608935, a: 1}
   m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0

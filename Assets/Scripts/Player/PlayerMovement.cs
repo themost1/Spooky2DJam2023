@@ -11,8 +11,9 @@ public class PlayerMovement : MonoBehaviour
     private List<GameObject> _feetTouching = new();
     private Rigidbody2D _rb;
     private float jumpDelay = 0,
-        maxJumpDelay = 0.1f;
+        maxJumpDelay = 0.02f;
     private float _speedBoostTimeSecs = 0.0f;
+    private float _flightTimeSecs = 0.0f;
 
     public bool IsGrounded
     {
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
                 * (_speedBoostTimeSecs > 0 ? 1.6f : 1)
                 * Time.deltaTime
         );
-        if (Input.GetButton("Jump") && IsGrounded && jumpDelay <= 0)
+        if (Input.GetButton("Jump") && (IsGrounded || _flightTimeSecs > 0) && jumpDelay <= 0)
         {
             _rb.velocity = new Vector3(0, jumpStrength, 0);
             jumpDelay = maxJumpDelay;
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         jumpDelay -= Time.deltaTime;
         _speedBoostTimeSecs -= Time.deltaTime;
-        // Debug.Log(_speedBoostTimeSecs + " player");
+        _flightTimeSecs -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,6 +76,23 @@ public class PlayerMovement : MonoBehaviour
         {
             _speedBoostTimeSecs = secs;
             return;
+        }
+        else
+        {
+            _speedBoostTimeSecs += secs;
+        }
+    }
+
+    public void AddFlightTime(float secs)
+    {
+        if (_flightTimeSecs < 0)
+        {
+            _flightTimeSecs = secs;
+            return;
+        }
+        else
+        {
+            _flightTimeSecs += secs;
         }
     }
 }
