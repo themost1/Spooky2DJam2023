@@ -55,3 +55,6 @@ TagManager:
   - name: Foreground
     uniqueID: 4041349059
     locked: 0
+  - name: Ghost
+    uniqueID: 2329337179
+    locked: 0
