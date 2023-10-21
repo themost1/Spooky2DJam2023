@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private List<GameObject> _feetTouching = new();
     private Rigidbody2D _rb;
     private float jumpDelay = 0, maxJumpDelay = 0.1f;
-
+    private float _speedBoostTimeSecs = 0.0f;
 
     public bool IsGrounded
     {
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float translateAmount = Input.GetAxis("Horizontal");
-        transform.Translate(Vector2.right * translateAmount * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * translateAmount * speed * (_speedBoostTimeSecs > 0 ? 1.4f : 1) * Time.deltaTime);
         if (Input.GetButton("Jump") && IsGrounded && jumpDelay <= 0)
         {
             _rb.velocity = new Vector3(0, jumpStrength, 0);
@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         jumpDelay -= Time.deltaTime;
+        _speedBoostTimeSecs -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,5 +61,14 @@ public class PlayerMovement : MonoBehaviour
         {
             _feetTouching.Remove(collision.gameObject);
         }
+    }
+
+    public void AddSpeedBoostTime(float secs)
+    {
+        if (_speedBoostTimeSecs < 0)
+        {
+            _speedBoostTimeSecs = secs;
+        }
+        _speedBoostTimeSecs += secs;
     }
 }
