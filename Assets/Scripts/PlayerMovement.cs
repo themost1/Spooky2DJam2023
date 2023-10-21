@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
+
     public float speed, jumpStrength;
     private List<GameObject> _feetTouching = new();
     private Rigidbody2D _rb;
@@ -16,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
         {
             return _feetTouching.Count != 0;
         }
+    }
+
+    private void Awake()
+    {
+        instance = this;
     }
 
     private void Start()

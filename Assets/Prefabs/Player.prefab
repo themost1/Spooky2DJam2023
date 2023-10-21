@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2751876174666462802}
   - component: {fileID: 2751876174666462805}
   - component: {fileID: 2751876174666462804}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 2751876174827529453}
   - component: {fileID: 2751876174827529455}
   - component: {fileID: 2751876174827529452}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HermanFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,8 +143,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1346358411
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: efd3bcb190d48c7478ca5c66a2bbd7c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 2751876175407447990}
   - component: {fileID: 2751876175407447988}
   - component: {fileID: 2751876175407447991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2751876176242090210}
   - component: {fileID: 2751876176242090213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,21 +421,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 4544394480117659399, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.00424999
+      value: -0.0012500286
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: 0.0020499825
+      value: -0.00080013275
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 1.49565
+      value: 4.50585
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 1.5072501
+      value: 4.4983
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[3]
+      value: -253618237
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
