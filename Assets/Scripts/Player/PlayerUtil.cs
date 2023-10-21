@@ -32,9 +32,8 @@ public class PlayerUtil : MonoBehaviour
         return null;
     }
 
-    public void AddKey()
+    public void UpdateKeys(int newKeyCount)
     {
-        _keys++;
         GameObject keyCount = GameObject.Find("KeyTextCanvas");
         foreach (Transform child in keyCount.transform)
         {
@@ -47,10 +46,21 @@ public class PlayerUtil : MonoBehaviour
         {
             key.UpdateKeyCount(_keys);
         }
-        foreach (Gate gate in GameObject.FindObjectsOfType<Gate>())
+    }
+
+    public void AddKey()
+    {
+        UpdateKeys(++_keys);
+    }
+
+    public bool SpendKey()
+    {
+        if (_keys > 0)
         {
-            gate.UpdateKeyCount(_keys);
+            UpdateKeys(--_keys);
+            return true;
         }
+        return false;
     }
 
     public void AddPickupBar()

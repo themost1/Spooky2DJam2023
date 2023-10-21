@@ -10,18 +10,18 @@ public class Gate : MonoBehaviour
 
     private void Start()
     {
-        UpdateKeyCount(PlayerUtil.instance.Keys);
+        Close();
     }
 
-    public void UpdateKeyCount(int keys)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (keys >= keysRequired)
+        PlayerUtil util = PlayerUtil.instance;
+        if (util)
         {
-            Open();
-        }
-        else
-        {
-            Close();
+            if (util.SpendKey())
+            {
+                Open();
+            }
         }
     }
 

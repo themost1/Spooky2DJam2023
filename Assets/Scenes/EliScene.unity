@@ -584,7 +584,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1147625968
 PrefabInstance:
@@ -831,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1719562438498716079, guid: d388eb9a68a30f045b58af65c6449bc8, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1719562438498716079, guid: d388eb9a68a30f045b58af65c6449bc8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1151,6 +1151,14 @@ PrefabInstance:
     - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[5]
       value: -1965630117
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788798699217273930, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8954591078842067293, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}

@@ -273,7 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3659148337514443457}
   - component: {fileID: 7508239947314971439}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 7372925415093357373}
   - component: {fileID: 6219047096005684343}
   - component: {fileID: 3444027774962027748}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Little_Guy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,27 +502,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.0011498928
+      value: -0.0013000965
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: -0.00064992905
+      value: -0.0020999908
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 4.50375
+      value: 4.498
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 4.50395
+      value: 4.5025
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[3]
+      value: -174582271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[4]
       value: -253618237
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544394480117659449, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[5]
+      value: -1965630117
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4318a0be0de76fe47ad454a4fef7a0b9, type: 3}

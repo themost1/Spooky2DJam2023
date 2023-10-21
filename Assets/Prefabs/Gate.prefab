@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7660640308045075335}
   - component: {fileID: 3879308973366017280}
   - component: {fileID: 6883658469074715858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gate_closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 4207482903123126194}
   - component: {fileID: 6343314233744750534}
   - component: {fileID: 853877264840373232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gate_open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197704650657625793}
   - component: {fileID: 144131150281341062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
