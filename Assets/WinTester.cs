@@ -16,5 +16,9 @@ public class WinTester : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ghost.Block(transform.position.x - offset);
+        foreach (Gate gate in GameObject.FindObjectsOfType<Gate>())
+        {
+            gate.Close(true); // permanently close all gates
+        }
     }
 }
