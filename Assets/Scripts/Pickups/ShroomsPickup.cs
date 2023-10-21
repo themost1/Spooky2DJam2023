@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShroomsPickup : MonoBehaviour
 {
     private float _speedBoostTimeSecs = 3.0f;
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject player = collision.gameObject;
@@ -19,6 +19,7 @@ public class ShroomsPickup : MonoBehaviour
             return;
         }
         playerMovement.AddSpeedBoostTime(_speedBoostTimeSecs);
+        player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar();
         Destroy(this.gameObject);
     }
 }

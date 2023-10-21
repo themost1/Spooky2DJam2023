@@ -32,4 +32,16 @@ public class PlayerUtil : MonoBehaviour
             }
         }
     }
+
+    public void AddPickupBar()
+    {
+        Instantiate(pickupBar);
+        pickupBar.transform.position = new Vector3(
+            transform.position.x,
+            transform.position.y - 1,
+            transform.position.z
+        );
+        pickupBar.GetComponent<PickupBar>().maxTime = 3;
+        pickupBar.GetComponent<PickupBar>().timeLeft = 3;
+    }
 }
