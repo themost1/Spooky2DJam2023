@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyPickup : MonoBehaviour
+public class KeyPickup : FlamePickup
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject player = collision.gameObject;
         PlayerUtil playerUtil = player.GetComponent<PlayerUtil>();
@@ -17,6 +17,6 @@ public class KeyPickup : MonoBehaviour
             return;
         }
         playerUtil.AddKey();
-        Destroy(this.gameObject);
+        base.OnTriggerEnter2D(collision);
     }
 }

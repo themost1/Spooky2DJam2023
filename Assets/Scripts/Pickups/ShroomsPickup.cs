@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShroomsPickup : MonoBehaviour
+public class ShroomsPickup : FlamePickup
 {
     private float _speedBoostTimeSecs = 3.0f;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject player = collision.gameObject;
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
@@ -20,6 +20,6 @@ public class ShroomsPickup : MonoBehaviour
         }
         playerMovement.AddSpeedBoostTime(_speedBoostTimeSecs);
         player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar();
-        Destroy(this.gameObject);
+        base.OnTriggerEnter2D(collision);
     }
 }

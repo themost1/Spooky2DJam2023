@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FlamePickup : MonoBehaviour
 {
-    private float _addIntensity = 0.5f;
+    public float lightAddition = 0.5f;
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject player = collision.gameObject;
         PlayerUtil playerUtil = player.GetComponent<PlayerUtil>();
@@ -23,7 +23,7 @@ public class FlamePickup : MonoBehaviour
         {
             return;
         }
-        lantern.GetComponent<Lantern>().AddIntensity(_addIntensity);
+        lantern.GetComponent<Lantern>().AddIntensity(lightAddition);
         Destroy(this.gameObject);
     }
 }
