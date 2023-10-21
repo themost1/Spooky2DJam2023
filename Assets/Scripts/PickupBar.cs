@@ -38,5 +38,6 @@ public class PickupBar : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        // Debug.Log(timeLeft + " pb");
     }
 }

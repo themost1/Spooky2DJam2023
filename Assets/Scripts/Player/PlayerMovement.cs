@@ -6,18 +6,17 @@ public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement instance;
 
-    public float speed, jumpStrength;
+    public float speed,
+        jumpStrength;
     private List<GameObject> _feetTouching = new();
     private Rigidbody2D _rb;
-    private float jumpDelay = 0, maxJumpDelay = 0.1f;
+    private float jumpDelay = 0,
+        maxJumpDelay = 0.1f;
     private float _speedBoostTimeSecs = 0.0f;
 
     public bool IsGrounded
     {
-        get
-        {
-            return _feetTouching.Count != 0;
-        }
+        get { return _feetTouching.Count != 0; }
     }
 
     private void Awake()
@@ -33,7 +32,13 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float translateAmount = Input.GetAxis("Horizontal");
-        transform.Translate(Vector2.right * translateAmount * speed * (_speedBoostTimeSecs > 0 ? 1.4f : 1) * Time.deltaTime);
+        transform.Translate(
+            Vector2.right
+                * translateAmount
+                * speed
+                * (_speedBoostTimeSecs > 0 ? 1.6f : 1)
+                * Time.deltaTime
+        );
         if (Input.GetButton("Jump") && IsGrounded && jumpDelay <= 0)
         {
             _rb.velocity = new Vector3(0, jumpStrength, 0);
@@ -45,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
     {
         jumpDelay -= Time.deltaTime;
         _speedBoostTimeSecs -= Time.deltaTime;
+        // Debug.Log(_speedBoostTimeSecs + " player");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -68,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         if (_speedBoostTimeSecs < 0)
         {
             _speedBoostTimeSecs = secs;
+            return;
         }
-        _speedBoostTimeSecs += secs;
     }
 }
