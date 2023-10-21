@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerUtil : MonoBehaviour
 {
+    private int _keys = 0;
+
     public GameObject GetLanternObject()
     {
         foreach (Transform child in transform)
@@ -14,5 +16,10 @@ public class PlayerUtil : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public void AddKey()
+    {
+        _keys++;
     }
 }
