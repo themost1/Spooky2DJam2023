@@ -232,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197704650657625793}
   - component: {fileID: 144131150281341062}
+  - component: {fileID: -3941621190868365598}
   m_Layer: 8
   m_Name: Gate
   m_TagString: Untagged
@@ -268,6 +269,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f03cc4c3b85259459de69e8223e067c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keysRequired: 1
+  index: 1
   open: {fileID: 7402601982295012971}
   closed: {fileID: 5150450980239493299}
+--- !u!50 &-3941621190868365598
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501177671787146014}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
