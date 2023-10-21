@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed, jumpStrength;
-
     private List<GameObject> _feetTouching = new();
-
     private Rigidbody2D _rb;
+    private float jumpDelay = 0, maxJumpDelay = 0.1f;
+
+
     public bool IsGrounded
     {
         get
@@ -26,10 +27,16 @@ public class PlayerMovement : MonoBehaviour
     {
         float translateAmount = Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * translateAmount * speed * Time.deltaTime);
-        if (Input.GetButton("Jump") && IsGrounded)
+        if (Input.GetButton("Jump") && IsGrounded && jumpDelay <= 0)
         {
             _rb.AddForce(new Vector2(0, jumpStrength), ForceMode2D.Impulse);
+            jumpDelay = maxJumpDelay;
         }
+    }
+
+    void Update()
+    {
+        jumpDelay -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
