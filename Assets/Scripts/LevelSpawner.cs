@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelSpawner : MonoBehaviour
 {
     public GameObject levelRandomizer;
+    public Parallax background;
     public float offset;
     private int _index;
 
