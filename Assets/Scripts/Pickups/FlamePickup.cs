@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FlamePickup : MonoBehaviour
 {
-    public float lightAddition = 0.5f;
-    
+    public float lightAddition = 0.2f;
+
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject player = collision.gameObject;
