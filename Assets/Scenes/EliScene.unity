@@ -546,7 +546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734a2d2541d61c944ad6511b2c04205f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseObject: {fileID: 1479269976}
   parallaxAmount: 0.1
 --- !u!224 &837133768 stripped
 RectTransform:
@@ -583,6 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelRandomizer: {fileID: 6502140283361490892, guid: 7f52fed48d601d64faca5b70f0acb002, type: 3}
+  background: {fileID: 8691380342019045292, guid: ca2e6159ce5bd294ca79fcfaf2a0375d, type: 3}
   offset: 38.4
 --- !u!4 &928669826
 Transform:
@@ -786,11 +786,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1479269976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2751876174666462800, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
-  m_PrefabInstance: {fileID: 2751876175523530697}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1699411999 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 261510382167382928, guid: 8c13629427d811e459a84779aa334873, type: 3}
@@ -1333,7 +1328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7613632483500696149, guid: 6ff887c2e63753e4e8f3adfce24e9382, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 214.7
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7613632483500696149, guid: 6ff887c2e63753e4e8f3adfce24e9382, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1372,6 +1367,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7613632483500696154, guid: 6ff887c2e63753e4e8f3adfce24e9382, type: 3}
+      propertyPath: m_Size.x
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613632483500696154, guid: 6ff887c2e63753e4e8f3adfce24e9382, type: 3}
       propertyPath: m_Size.y
       value: 30
       objectReference: {fileID: 0}
@@ -1382,6 +1381,10 @@ PrefabInstance:
     - target: {fileID: 7613632483500696155, guid: 6ff887c2e63753e4e8f3adfce24e9382, type: 3}
       propertyPath: m_Name
       value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613632483500696155, guid: 6ff887c2e63753e4e8f3adfce24e9382, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff887c2e63753e4e8f3adfce24e9382, type: 3}
