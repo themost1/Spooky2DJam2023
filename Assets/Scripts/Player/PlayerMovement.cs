@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             translateAmount = Input.GetAxis("Horizontal");
-            isJumping = Input.GetButton("Jump");
+            isJumping = Input.GetButton("Jump") || (Input.GetAxis("Vertical") > 0);
         }
         
         transform.Translate(
