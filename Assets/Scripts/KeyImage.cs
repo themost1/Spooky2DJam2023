@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class KeyImage : MonoBehaviour
 {
-
     public int index;
 
     private Image _image;

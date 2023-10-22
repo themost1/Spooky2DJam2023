@@ -34,14 +34,6 @@ public class PlayerUtil : MonoBehaviour
 
     public void UpdateKeys(int newKeyCount)
     {
-        GameObject keyCount = GameObject.Find("KeyTextCanvas");
-        foreach (Transform child in keyCount.transform)
-        {
-            if (child.name == "KeyText")
-            {
-                child.GetComponent<TMP_Text>().text = _keys.ToString() + "/3";
-            }
-        }
         foreach (KeyImage key in GameObject.FindObjectsOfType<KeyImage>())
         {
             key.UpdateKeyCount(_keys);
