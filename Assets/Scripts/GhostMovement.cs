@@ -10,6 +10,10 @@ public class GhostMovement : MonoBehaviour
     public string loseScene;
 
     private float _blockedX = Mathf.Infinity;
+    public bool Blocked 
+    {
+        get => _blockedX < Mathf.Infinity;
+    }
 
     // Update is called once per frame
     void Update()
