@@ -48,7 +48,7 @@ public class Lantern : MonoBehaviour
             calcMaxFalloff += boastAmt;
         }
         _light.pointLightOuterRadius =
-            minFalloff + (calcMaxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
+            minFalloff + (calcMaxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength * 1.4f));
         flickerAmt = Mathf.Min(_light.intensity * 0.3f, 0.4f) * (flickerAmt < 0 ? -1 : 1);
     }
 
