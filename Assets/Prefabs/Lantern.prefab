@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4544394480117659398}
   - component: {fileID: 4544394480117659449}
   - component: {fileID: 4544394480117659448}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lantern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4544394480117659399}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
@@ -46,14 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 1
+  m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.3
   m_Color: {r: 0.9528302, g: 0.8008001, b: 0.644209, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000ab5119418bcc3f50
+  m_ApplyToSortingLayers: 00000000ab5119418bcc3f50011698f5c317e2f05bddd68a
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00064998865, y: -0.0010499954, z: 0}
-    m_Extent: {x: 1.49425, y: 1.49945, z: 0}
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 1
+  m_ShapeLightFalloffSize: 4
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -123,3 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea14cef2f8df8e541b56e5122b6da3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minFalloff: 0.5
+  maxFalloff: 1.5
+  lightDecayPerSec: 0.07
+  startLightStrength: 0.3
+  minIntensity: 0.9
+  maxStrength: 1
+  defaultIntensity: 1

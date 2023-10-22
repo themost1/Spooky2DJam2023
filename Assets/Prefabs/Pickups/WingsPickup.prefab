@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9234abb6c576b5498623455c41a2955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightAddition: 0.5
+  lightAddition: 0.2
   flightDuration: 6
 --- !u!1 &8455609645913627634
 GameObject:

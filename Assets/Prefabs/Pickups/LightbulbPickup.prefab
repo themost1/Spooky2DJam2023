@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7015841837628432705}
   - component: {fileID: 7015841837628432704}
   - component: {fileID: 7015841837628432707}
-  - component: {fileID: 7015841837628432706}
   - component: {fileID: 8221638997668551818}
   m_Layer: 0
   m_Name: LightbulbPickup
@@ -104,19 +103,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
---- !u!114 &7015841837628432706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7015841837628432702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d14e3181fe53c3408c26937fcf1b72b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightAddition: 0.5
 --- !u!114 &8221638997668551818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b470404f3d613544e98cf567b52e540f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightAddition: 0.5
+  lightAddition: 0.65
   lightDuration: 5
   boostAmount: 1
 --- !u!1 &8455609645913627634
