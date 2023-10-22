@@ -1233,36 +1233,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713688, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
-      propertyPath: minRadius
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624137827023713688, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: minIntensity
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624137827023713688, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
-      propertyPath: lightDecayPerSec
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
-      propertyPath: m_LightType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
-      propertyPath: m_LocalBounds.m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
-      propertyPath: m_LocalBounds.m_Center.y
-      value: -0.00000011920929
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
-      propertyPath: m_LocalBounds.m_Extent.x
-      value: 0.9985302
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
-      propertyPath: m_LocalBounds.m_Extent.y
-      value: 0.99853027
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}

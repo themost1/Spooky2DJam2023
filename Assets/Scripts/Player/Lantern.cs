@@ -9,7 +9,7 @@ public class Lantern : MonoBehaviour
     public float lightDecayPerSec = 0.05f;
     public float startLightStrength = 1f;
     public float minIntensity = 0.2f;
-    public float maxIntensity = 1f;
+    public float maxStrength = 1f;
     public float defaultIntensity = 1f;
 
     private float lightStrength;
@@ -19,7 +19,6 @@ public class Lantern : MonoBehaviour
 
     private float boostTime = 0f;
     private float boastAmt = 0f;
-    public float minRadius;
 
     void Start()
     {
@@ -46,10 +45,7 @@ public class Lantern : MonoBehaviour
         {
             calcMaxFalloff += boastAmt;
         }
-        _light.pointLightOuterRadius = minRadius + (boostTime > 0 ? boastAmt : 0);
-        // Below line was used for freeform light
-        _light.shapeLightFalloffSize =
-            minFalloff + (calcMaxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
+        _light.pointLightOuterRadius = minFalloff + (calcMaxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
         flickerAmt = Mathf.Min(_light.intensity * 0.3f, 0.4f) * (flickerAmt < 0 ? -1 : 1);
     }
 
@@ -60,9 +56,9 @@ public class Lantern : MonoBehaviour
             lightStrength = 0;
         }
         lightStrength += intensity;
-        if (lightStrength + defaultIntensity > maxIntensity)
+        if (lightStrength > maxStrength)
         {
-            lightStrength = maxIntensity - defaultIntensity;
+            lightStrength = maxStrength;
         }
     }
 
