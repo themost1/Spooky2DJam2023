@@ -1412,7 +1412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713688, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: minIntensity
-      value: 0.65
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713688, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: lightDecayPerSec
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
