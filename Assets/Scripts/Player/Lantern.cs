@@ -9,6 +9,7 @@ public class Lantern : MonoBehaviour
     public float lightDecayPerSec = 0.05f;
     public float startLightStrength = 1f;
     public float minIntensity = 0.2f;
+    public float maxIntensity = 1.4f;
     public float maxStrength = 1f;
     public float defaultIntensity = 1f;
 
@@ -40,12 +41,14 @@ public class Lantern : MonoBehaviour
         GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity +=
             flickerAmt * Time.deltaTime;
         _light.intensity = Mathf.Max(minIntensity, lightStrength + defaultIntensity);
+        _light.intensity = Mathf.Min(maxIntensity, _light.intensity);
         float calcMaxFalloff = maxFalloff;
         if (boostTime > 0)
         {
             calcMaxFalloff += boastAmt;
         }
-        _light.pointLightOuterRadius = minFalloff + (calcMaxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
+        _light.pointLightOuterRadius =
+            minFalloff + (calcMaxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
         flickerAmt = Mathf.Min(_light.intensity * 0.3f, 0.4f) * (flickerAmt < 0 ? -1 : 1);
     }
 
