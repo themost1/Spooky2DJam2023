@@ -8,6 +8,10 @@ public class ShroomsPickup : FlamePickup
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
+        if (pickedUp)
+        {
+            return;
+        }
         GameObject player = collision.gameObject;
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
         if (playerMovement == null)
@@ -21,6 +25,7 @@ public class ShroomsPickup : FlamePickup
         playerMovement.AddSpeedBoostTime(speedBoostDuration);
         player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar(speedBoostDuration);
         PlayerUtil.instance.GetComponent<AudioSource>().Play(0);
+        pickedUp = true;
         base.OnTriggerEnter2D(collision);
     }
 }

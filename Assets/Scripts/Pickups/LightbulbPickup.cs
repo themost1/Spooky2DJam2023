@@ -9,10 +9,15 @@ public class LightbulbPickup : FlamePickup
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
+        if (pickedUp)
+        {
+            return;
+        }
         Lantern light = GameObject.FindObjectOfType<Lantern>();
         light.Boost(lightDuration, boostAmount);
         PlayerUtil.instance.AddPickupBar(lightDuration);
         PlayerUtil.instance.GetComponent<AudioSource>().Play(0);
+        pickedUp = true;
         base.OnTriggerEnter2D(collision);
     }
 }

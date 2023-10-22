@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlamePickup : MonoBehaviour
 {
     public float lightAddition = 0.2f;
+    public bool pickedUp = false;
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,6 +26,7 @@ public class FlamePickup : MonoBehaviour
         }
         lantern.GetComponent<Lantern>().AddIntensity(lightAddition);
         playerUtil.GetComponent<AudioSource>().Play(0);
+        pickedUp = true;
         Destroy(this.gameObject);
     }
 }

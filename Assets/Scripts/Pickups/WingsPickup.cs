@@ -8,6 +8,10 @@ public class WingsPickup : FlamePickup
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
+        if (pickedUp)
+        {
+            return;
+        }
         GameObject player = collision.gameObject;
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
         if (playerMovement == null)
@@ -21,6 +25,7 @@ public class WingsPickup : FlamePickup
         playerMovement.AddFlightTime(flightDuration);
         player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar(flightDuration);
         PlayerUtil.instance.GetComponent<AudioSource>().Play(0);
+        pickedUp = true;
         base.OnTriggerEnter2D(collision);
     }
 }
