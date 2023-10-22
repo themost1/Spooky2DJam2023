@@ -19,6 +19,7 @@ public class Lantern : MonoBehaviour
 
     private float boostTime = 0f;
     private float boastAmt = 0f;
+    public float minRadius;
 
     void Start()
     {
@@ -45,6 +46,8 @@ public class Lantern : MonoBehaviour
         {
             calcMaxFalloff += boastAmt;
         }
+        _light.pointLightOuterRadius = minRadius + (boostTime > 0 ? boastAmt : 0);
+        // Below line was used for freeform light
         _light.shapeLightFalloffSize =
             minFalloff + (calcMaxFalloff - minFalloff) / (Mathf.Max(1f, 1 - lightStrength));
         flickerAmt = Mathf.Min(_light.intensity * 0.3f, 0.4f) * (flickerAmt < 0 ? -1 : 1);

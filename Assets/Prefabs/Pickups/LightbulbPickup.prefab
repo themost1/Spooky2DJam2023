@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightAddition: 0.5
   lightDuration: 5
-  boostAmount: 4
+  boostAmount: 1
 --- !u!1 &8455609645913627634
 GameObject:
   m_ObjectHideFlags: 0
