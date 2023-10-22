@@ -20,6 +20,7 @@ public class ShroomsPickup : FlamePickup
         }
         playerMovement.AddSpeedBoostTime(speedBoostDuration);
         player.transform.parent.GetComponent<PlayerUtil>().AddPickupBar(speedBoostDuration);
+        PlayerUtil.instance.GetComponent<AudioSource>().Play(0);
         base.OnTriggerEnter2D(collision);
     }
 }

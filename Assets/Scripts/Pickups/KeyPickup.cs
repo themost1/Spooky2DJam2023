@@ -17,6 +17,7 @@ public class KeyPickup : FlamePickup
             return;
         }
         playerUtil.AddKey();
+        playerUtil.GetComponent<AudioSource>().Play(0);
         base.OnTriggerEnter2D(collision);
     }
 }

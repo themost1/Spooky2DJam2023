@@ -12,6 +12,7 @@ public class LightbulbPickup : FlamePickup
         Lantern light = GameObject.FindObjectOfType<Lantern>();
         light.Boost(lightDuration, boostAmount);
         PlayerUtil.instance.AddPickupBar(lightDuration);
+        PlayerUtil.instance.GetComponent<AudioSource>().Play(0);
         base.OnTriggerEnter2D(collision);
     }
 }

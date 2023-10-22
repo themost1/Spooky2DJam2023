@@ -24,6 +24,7 @@ public class FlamePickup : MonoBehaviour
             return;
         }
         lantern.GetComponent<Lantern>().AddIntensity(lightAddition);
+        playerUtil.GetComponent<AudioSource>().Play(0);
         Destroy(this.gameObject);
     }
 }

@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734a2d2541d61c944ad6511b2c04205f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxAmount: 0.1
+  parallaxAmount: 0.3
 --- !u!224 &837133768 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 261510382167382928, guid: 8c13629427d811e459a84779aa334873, type: 3}
@@ -786,6 +786,107 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1275707856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2751876174666462800, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+  m_PrefabInstance: {fileID: 2751876175523530697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1275707861
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275707856}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2d6b62c0ec37c5f4ea421394d39b264b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!224 &1699411999 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 261510382167382928, guid: 8c13629427d811e459a84779aa334873, type: 3}
@@ -1312,6 +1413,30 @@ PrefabInstance:
     - target: {fileID: 4624137827023713688, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
       propertyPath: minIntensity
       value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[2]
+      value: 470527399
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[3]
+      value: 1346358411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[4]
+      value: -174582271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[5]
+      value: -253618237
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624137827023713689, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[6]
+      value: -1965630117
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d58db0c4257c034fa15aebe24986531, type: 3}
